@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="container">
-    <h1 class="header-1">Hello World lets build with Vue!</h1>
+    <Header></Header>
     <h2 class="header-2"> Video Player </h2>
     <SearchBar @searchChange="onSearchChange"></SearchBar>
     <div class="videos__container">
@@ -12,15 +12,17 @@
 
 <script>
 import axios from 'axios';
+import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import VideoList from './components/VideoList';
 import VideoDetails from './components/VideoDetails';
 import keys from './config/keys';
-const API_KEY = keys.api;
+const API_KEY = keys.googleYT;
 
 export default {
   name: 'App',
   components: {
+    Header,
     SearchBar,
     VideoList,
     VideoDetails
@@ -73,8 +75,8 @@ export default {
   }
 
   .container {
+    position: relative;
     text-align: center;
-    margin-top: 2rem;
   }
 
   .videos__container {
@@ -89,11 +91,8 @@ export default {
     }
   }
 
-  .header-1 {
-
-  }
-
   .header-2 {
+    margin-top: 1rem;
     font-size: 2.5rem;
     padding-left: 2rem;
     text-align: left;

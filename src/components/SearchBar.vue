@@ -19,14 +19,13 @@ export default {
 <!-- scoped restrict style to this component -->
 <style lang="css" >
   .searchbar {
-
     width: 30rem;
     font-size: 2.5rem;
     padding-left: 1rem;
     border: none;
     border-bottom: 2px solid var(--color-primary);
     outline: none;
-    margin-top: 2rem;
+
   }
 
   .searchbar::placeholder {
@@ -39,6 +38,6 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin-top: 2rem;
   }
 </style>
